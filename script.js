@@ -24,7 +24,7 @@ displayPerson(person2);*/
 //NESTED OBJECTS - objects inside of another object
 
 
-const person = {
+/*const person = {
     fullName: "Adeyemi Omolara",
     age: 30,
     isStudent: true,
@@ -68,4 +68,32 @@ const person3 = new Person("Clara", "19", "16 Agb St.", "Lagos", "Nigeria");
 
 console.log(person1.name);
 console.log(person1.address.country);
-console.log(person3.address.street);
+console.log(person3.address.street);*/
+
+//ARRAYS OF OBJECTS
+
+const fruits = [{name: "apple", color: "red", calories: "95"},
+                 {name: "banana", color: "green", calories: "35"},
+                 {name: "orange", color: "orange", calories: "78"},
+                 {name: "coconut", color: "yellow", calories: "195"},
+                 {name: "pineapple", color: "yellow", calories: "50"}];
+
+//fruits.push({name: "grapes", color: "purple", calories: "15"});
+//fruits.pop()
+//fruits.splice(1, 2);
+//console.log(fruits);
+
+//for each
+fruits.forEach(fruit => console.log(fruit.name));
+
+//map
+const fruitNames = fruits.map(fruit => fruit.name);
+console.log(fruitNames)
+
+//filter
+const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+console.log(yellowFruits)
+
+//reduce
+const maxFruit = fruits.reduce((max, fruit) => fruit.calories > max.calories ? fruit : max);
+console.log(maxFruit);
