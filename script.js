@@ -72,7 +72,7 @@ console.log(person3.address.street);*/
 
 //ARRAYS OF OBJECTS
 
-const fruits = [{name: "apple", color: "red", calories: "95"},
+/*const fruits = [{name: "apple", color: "red", calories: "95"},
                  {name: "banana", color: "green", calories: "35"},
                  {name: "orange", color: "orange", calories: "78"},
                  {name: "coconut", color: "yellow", calories: "195"},
@@ -96,4 +96,20 @@ console.log(yellowFruits)
 
 //reduce
 const maxFruit = fruits.reduce((max, fruit) => fruit.calories > max.calories ? fruit : max);
-console.log(maxFruit);
+console.log(maxFruit);*/
+
+//SORT- method used to sort elements of an array in place.
+let fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
+fruits.sort();
+console.log(fruits);
+
+let numbers = [1, 8, 5, 9, 6, 2, ,3, 7, 10, 4]
+numbers.sort((a, b) => a - b)
+console.log(numbers)
+
+const people = [{name: "Beauty", age: 18, gpa: 3.0},
+                {name: "Tom", age: 31, gpa: 4.0},
+                {name: "Clara", age: 25, gpa: 3.5},
+                {name: "Lade", age: 19, gpa: 3.8}]
+people.sort((a, b) => a.age - b.age);
+console.log(people)
