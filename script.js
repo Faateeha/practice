@@ -126,7 +126,7 @@ console.log(day);*/
 
 //CLOSURE-A function defined inside of another function.
 
-function createCounter() {
+/*function createCounter() {
   let count = 0;
   function increment() {
     count++;
@@ -168,4 +168,17 @@ const game = createGame();
 game.increaseScore(5);
 game.increaseScore(8);
 game.decreaseScore(3);
-console.log(`The final score is ${game.getScore()}pts`);
+console.log(`The final score is ${game.getScore()}pts`);*/
+
+//SetTimeout-it always you to schedule the execution of a function after an amount of time.
+let timeoutId;
+
+function startTimer(){
+  timeoutId = setTimeout(() => window.alert("Hello"), 3000);
+  console.log("STARTED");
+}
+
+function clearTimer(){
+  clearTimeout(timeoutId);
+  console.log("CLEARED");
+}
