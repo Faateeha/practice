@@ -23,7 +23,6 @@ displayPerson(person2);*/
 
 //NESTED OBJECTS - objects inside of another object
 
-
 /*const person = {
     fullName: "Adeyemi Omolara",
     age: 30,
@@ -99,7 +98,7 @@ const maxFruit = fruits.reduce((max, fruit) => fruit.calories > max.calories ? f
 console.log(maxFruit);*/
 
 //SORT- method used to sort elements of an array in place.
-let fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
+/*let fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
 fruits.sort();
 console.log(fruits);
 
@@ -112,4 +111,61 @@ const people = [{name: "Beauty", age: 18, gpa: 3.0},
                 {name: "Clara", age: 25, gpa: 3.5},
                 {name: "Lade", age: 19, gpa: 3.8}]
 people.sort((a, b) => a.age - b.age);
-console.log(people)
+console.log(people)*/
+
+/*DATES-objects that contain values that represent dates and times. These date objects can be changed and formatted.
+
+const date = new Date();
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDate();
+
+console.log(year);
+console.log(month);
+console.log(day);*/
+
+//CLOSURE-A function defined inside of another function.
+
+function createCounter() {
+  let count = 0;
+  function increment() {
+    count++;
+    console.log(`count increased to ${count}`);
+  }
+  function getCount() {
+    return count;
+  }
+
+  return { increment, getCount };
+}
+const counter = createCounter();
+
+counter.increment();
+counter.increment();
+
+console.log(`The current count is ${counter.getCount()}`);
+
+//Example2
+function createGame() {
+  let score = 0;
+  function increaseScore(points) {
+    score += points;
+    console.log(`+${points}pts`);
+  }
+  function decreaseScore(points) {
+    score -= points;
+    console.log(`-${points}pts`);
+  }
+
+  function getScore() {
+    return score;
+  }
+
+  return {increaseScore, decreaseScore, getScore}
+}
+
+const game = createGame();
+game.increaseScore(5);
+game.increaseScore(8);
+game.decreaseScore(3);
+console.log(`The final score is ${game.getScore()}pts`);
